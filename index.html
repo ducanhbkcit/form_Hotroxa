@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hệ thống đăng ký hỗ trợ AI - Đức Anh</title>
+  <meta name="description" content="Biểu mẫu đăng ký hỗ trợ AI phục vụ công việc hành chính Nhà nước." />
   <style>
     :root{
       --bg:#eef3f9;
@@ -18,15 +19,18 @@
       --warn:#b45309;
       --okbg:#eefbf6;
       --okline:#b7e3d3;
+      --noteBg:#fff8eb;
+      --noteLine:#f6dfb2;
       --shadow:0 18px 40px rgba(15, 23, 42, 0.08);
       --radius:22px;
     }
 
-    *{box-sizing:border-box}
-    html,body{
+    * { box-sizing:border-box; }
+
+    html, body {
       margin:0;
       padding:0;
-      font-family:Inter,Segoe UI,Arial,sans-serif;
+      font-family:Inter, Segoe UI, Arial, sans-serif;
       background:
         radial-gradient(circle at top left, rgba(37,99,235,.12), transparent 28%),
         radial-gradient(circle at top right, rgba(15,118,110,.12), transparent 26%),
@@ -34,13 +38,15 @@
       color:var(--text);
     }
 
-    .wrap{
+    body { min-height:100vh; }
+
+    .wrap {
       max-width:1180px;
       margin:0 auto;
       padding:24px 16px 40px;
     }
 
-    .hero{
+    .hero {
       position:relative;
       overflow:hidden;
       background:linear-gradient(135deg, #123a78 0%, #1e40af 52%, #0f766e 100%);
@@ -151,7 +157,7 @@
       color:#173a67;
     }
 
-    .req{color:#dc2626}
+    .req{ color:#dc2626; }
 
     input[type="text"],
     input[type="email"],
@@ -196,6 +202,7 @@
       border-radius:16px;
       background:#f9fbff;
       transition:.18s ease;
+      cursor:pointer;
     }
 
     .check-item:hover{
@@ -277,7 +284,8 @@
       transition:.2s ease;
     }
 
-    .btn:hover{transform:translateY(-1px)}
+    .btn:hover{ transform:translateY(-1px); }
+
     .btn:disabled{
       opacity:.72;
       cursor:not-allowed;
@@ -290,15 +298,16 @@
       font-weight:700;
       line-height:1.5;
     }
-    .msg.ok{color:var(--accent)}
-    .msg.err{color:var(--danger)}
-    .msg.wait{color:var(--warn)}
+
+    .msg.ok{ color:var(--accent); }
+    .msg.err{ color:var(--danger); }
+    .msg.wait{ color:var(--warn); }
 
     .note{
       padding:14px 16px;
       border-radius:14px;
-      background:#fff8eb;
-      border:1px solid #f6dfb2;
+      background:var(--noteBg);
+      border:1px solid var(--noteLine);
       color:#7c4a03;
       font-size:13px;
       line-height:1.65;
@@ -354,12 +363,30 @@
       border-radius:14px;
       border:1px solid #d8e3ef;
       background:#fff;
+      display:block;
     }
 
     .cert-card h4{
       margin:10px 0 0;
       font-size:14px;
       color:#173a67;
+    }
+
+    .img-fallback{
+      width:100%;
+      height:220px;
+      border-radius:14px;
+      border:1px dashed #b6c7da;
+      background:linear-gradient(180deg,#ffffff 0%, #f3f8fd 100%);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+      color:#47627f;
+      font-size:13px;
+      line-height:1.6;
+      font-weight:700;
+      text-align:center;
     }
 
     .muted{
@@ -387,43 +414,44 @@
     }
 
     @media (max-width:980px){
-      .grid{grid-template-columns:1fr}
-      .cert-grid{grid-template-columns:1fr}
+      .grid{ grid-template-columns:1fr; }
+      .cert-grid{ grid-template-columns:1fr; }
     }
 
     @media (max-width:640px){
-      .hero h1{font-size:28px}
-      .card-head,.card-body{padding-left:16px;padding-right:16px}
-      .hours{grid-template-columns:1fr}
+      .hero h1{ font-size:28px; }
+      .card-head,.card-body{ padding-left:16px; padding-right:16px; }
+      .hours{ grid-template-columns:1fr; }
+      .actions{ align-items:flex-start; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <h1>HỆ THỐNG ĐĂNG KÝ HỖ TRỢ TIẾP CẬN AI - ĐỨC ANH</h1>
+      <h1>HỆ THỐNG ĐĂNG KÝ HỖ TRỢ AI - ĐỨC ANH</h1>
       <p>
         Các tài liệu tập trung vào việc xây dựng nền tảng AI, kỹ thuật viết câu lệnh và xây dựng Trợ lý chuyên nghiệp
         phục vụ công việc hành chính Nhà nước. Giúp từng bước tiếp cận và làm chủ AI một cách thực tiển và phù hợp
-        với yêu cầu thực tiễn công việc UBND xã/phường hiện nay.
+        với yêu cầu thực tiễn công việc Hành chính cấp xã hiện nay.
       </p>
-      <div class="slogan">_AI KHÔNG THAY THẾ CON NGƯỜI_
-_ Những người biết AI _
-                    _ Sẽ thay thế người không biết AI _</div>
+      <div class="slogan">AI KHÔNG THAY THẾ CON NGƯỜI
+_ Những người biết AI _ Sẽ thay thế người không biết AI _</div>
+
     </section>
 
     <div class="grid">
       <section class="card">
         <div class="card-head">
-          <h2>Biểu mẫu đăng ký hỗ trợ tiếp cận AI</h2>
+          <h2>Biểu mẫu đăng ký hỗ trợ</h2>
           <p>
             Vui lòng khai báo đầy đủ, chính xác để hệ thống tổng hợp nhu cầu học tập, hỗ trợ điều phối nội dung,
-            thời gian, địa điểm và phục vụ hỗ trợ trực tiếp tại địa phương.
+            thời gian, địa điểm và phục vụ xây dựng kế hoạch Hỗ trợ.
           </p>
         </div>
 
         <div class="card-body">
-          <form id="registerForm" method="post" target="hidden_iframe">
+          <form id="registerForm" method="post" target="hidden_iframe" novalidate>
             <input type="hidden" name="noiDungDangKyHoTro" id="noiDungDangKyHoTro" value="" />
 
             <div class="field">
@@ -442,29 +470,26 @@ _ Những người biết AI _
             </div>
 
             <div class="field">
-              <label>Nội dung Đăng ký hỗ trợ <span class="req">*</span></label>
+              <label>Nội dung hỗ trợ xây dựng <span class="req">*</span></label>
               <div class="check-wrap" id="noiDungGroup">
                 <label class="check-item">
                   <input type="checkbox" value="Ứng dụng AI trong hành chính, văn phòng. Viết Prompt chuyên sâu trong lĩnh vực hành chính. Ứng dụng NotebookLM cho công việc hành chính.">
-                  <span>Ứng dụng AI trong hành chính, văn phòng. Viết Prompt chuyên sâu trong lĩnh vực hành chính. 
-                  - Ứng dụng NotebookLM cho công việc hành chính.</span>
+                  <span>Ứng dụng AI trong hành chính, văn phòng.<br> - Viết Prompt chuyên sâu trong lĩnh vực hành chính.<br> - Ứng dụng NotebookLM cho công việc hành chính.</span>
                 </label>
 
                 <label class="check-item">
                   <input type="checkbox" value="AI trong Hành chính (Hiểu AI để làm việc hiệu quả hơn, nhanh hơn; Prompt chuyên sâu cho lĩnh vực hành chính; Khai thác hiệu quả bộ công cụ hỗ trợ pháp lý PKT; khai thác và sử dụng hiệu quả 1 trong các AI GPT/Gemini/NotebookLM).">
-                  <span>AI trong Hành chính 
-                  (Hiểu AI để làm việc hiệu quả hơn, nhanh hơn; Prompt chuyên sâu cho lĩnh vực hành chính; Khai thác hiệu quả bộ công cụ hỗ trợ pháp lý PKT; khai thác và sử dụng hiệu quả 1 trong các AI GPT/Gemini/NotebookLM).</span>
+                  <span>AI trong Hành chính<br> - Hiểu AI để làm việc hiệu quả hơn, nhanh hơn; Prompt chuyên sâu cho lĩnh vực hành chính;<br> - Khai thác hiệu quả bộ công cụ hỗ trợ pháp lý PKT; khai thác và sử dụng hiệu quả 1 trong các AI GPT/Gemini/NotebookLM).</span>
                 </label>
 
                 <label class="check-item">
                   <input type="checkbox" value="TRỢ LÝ AI CỦA Chuyên viên PHÒNG KINH TẾ XÃ / PHƯỜNG (từ căn bản đến sử dụng hiệu quả, chuyên nghiệp cho công việc chuyên môn).">
-                  <span>TRỢ LÝ AI CỦA Chuyên viên PHÒNG KINH TẾ XÃ/PHƯỜNG 
-                  (từ căn bản đến sử dụng hiệu quả, chuyên nghiệp cho công việc chuyên môn).</span>
+                  <span>TRỢ LÝ AI CỦA Chuyên viên PHÒNG KINH TẾ XÃ / PHƯỜNG <br> (từ căn bản đến sử dụng hiệu quả, chuyên nghiệp cho công việc chuyên môn).</span>
                 </label>
 
                 <label class="check-item">
                   <input type="checkbox" value="Kỹ năng xây dựng trợ lý riêng phục vụ công việc.">
-                  <span>Kỹ năng xây dựng trợ lý riêng phục vụ công việc Hành chính.</span>
+                  <span>Kỹ năng xây dựng trợ lý riêng phục vụ công việc hành chính hàng ngày.</span>
                 </label>
               </div>
             </div>
@@ -475,18 +500,18 @@ _ Những người biết AI _
             </div>
 
             <div class="field">
-              <label for="thoiGianDuKienThucHien">Thời gian dự kiến thực hiện <span class="req">*</span></label>
+              <label for="thoiGianDuKienThucHien">Thời gian dự kiến hỗ trợ <span class="req">*</span></label>
               <input id="thoiGianDuKienThucHien" name="thoiGianDuKienThucHien" type="date" required />
             </div>
 
             <div class="hours">
               <div class="field">
-                <label for="soGioHuongDanTrucTiep">Số giờ Hỗ trợ trực tiếp</label>
+                <label for="soGioHuongDanTrucTiep">Số giờ hỗ trợ trực tiếp</label>
                 <input id="soGioHuongDanTrucTiep" name="soGioHuongDanTrucTiep" type="number" min="0" step="0.5" placeholder="Ví dụ: 2" />
               </div>
 
               <div class="field">
-                <label for="soGioHuongDanOnline">Số giờ Hỗ trợ Online</label>
+                <label for="soGioHuongDanOnline">Số giờ hướng dẩn Online</label>
                 <input id="soGioHuongDanOnline" name="soGioHuongDanOnline" type="number" min="0" step="0.5" placeholder="Ví dụ: 4" />
               </div>
             </div>
@@ -503,36 +528,34 @@ _ Những người biết AI _
 
             <div class="actions">
               <button type="submit" class="btn" id="btnSubmit">XÁC NHẬN ĐĂNG KÝ NGAY</button>
-              <div class="msg" id="submitMessage"></div>
+              <div class="msg" id="submitMessage" aria-live="polite"></div>
             </div>
 
             <div class="note">
-              Dữ liệu sau khi gửi sẽ được lưu vào Google Sheet để phục vụ tổng hợp nhu cầu học tập, điều phối lớp và tổ chức thực hiện.
+              Dữ liệu sau khi gửi sẽ được lưu vào Google Sheet để phục vụ tổng hợp nhu cầu học tập, điều phối lớp và tổ chức hỗ trợ.
             </div>
           </form>
 
-          <iframe name="hidden_iframe" id="hidden_iframe"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" title="Khung gửi dữ liệu ẩn"></iframe>
         </div>
       </section>
 
       <aside class="card">
         <div class="card-head">
           <h2>Khối thông tin điều phối</h2>
-          <p>Thông tin chuyên môn, kinh nghiệm và năng lực phục vụ điều phối nội dung hỗ trợ.</p>
+          <p>Thông tin chuyên môn, kinh nghiệm và năng lực</p>
         </div>
 
         <div class="card-body">
           <div class="info-block">
             <h3>Information</h3>
             <p>
-              Lê Đức Anh, Sinh năm 1993<br>
-              Nơi sinh:Hải Lăng, Quảng Trị<br>
-              Đang sinh sống_làm việc tại Xuân Lộc, Đồng Nai.<br>
-              Tốt nghiệp Kỹ sư Tin học - Xây dựng (BKĐN), Cử nhân Luật (OU)<br>
-              Đào tạo nghề nghiệp trình độ Cao đẳng & Trung cấp<br>
-              Chứng chỉ hành nghề Quản lý dự án hạng 2.<br>
-              Được cấp chứng chỉ Chuyên môn Microsoft AI Product Manage và<br>
-              Gemini Certified Education. English B2.
+              Lê Đức Anh_ sinh năm 1993,<br>
+              Nơi sinh: Hải Lăng_Quảng Trị<br>
+              Đang sinh sống_làm việc hiện tại Xuân Lộc, Đồng Nai.<br>
+              Tốt nghiệp Kỹ sư Tin học Xây dựng (BKĐN), Cử nhân Luật (OU),<br> Đào tạo nghề nghiệp trình độ Cao đẳng &amp; Trung cấp,
+              <br>Chứng chỉ hành nghề Quản lý dự án hạng <br>2. Được cấp chứng chỉ Chuyên môn Microsoft AI Product Manage và
+              Gemini Certified Education. <br>English B2.
             </p>
           </div>
 
@@ -547,18 +570,20 @@ _ Những người biết AI _
 
           <div class="cert-grid">
             <div class="cert-card">
-              <img src="assets/gemini-certified-educator.png" alt="Gemini Certified Educator">
+              <img src="./assets/gemini-certified-educator.png" alt="Gemini Certified Educator" onerror="handleImgError(this, 'Chưa tìm thấy ảnh chứng chỉ Gemini Certified Educator trong thư mục assets.')" />
+              <div class="img-fallback">Chưa tìm thấy ảnh chứng chỉ Gemini Certified Educator trong thư mục assets.</div>
               <h4>Chuẩn dữ liệu</h4>
             </div>
 
             <div class="cert-card">
-              <img src="assets/microsoft-certificate.jpg" alt="Microsoft Certificate">
+              <img src="./assets/microsoft-certificate.jpg" alt="Microsoft Certificate" onerror="handleImgError(this, 'Chưa tìm thấy ảnh chứng chỉ Microsoft trong thư mục assets.')" />
+              <div class="img-fallback">Chưa tìm thấy ảnh chứng chỉ Microsoft trong thư mục assets.</div>
               <h4>Mô hình thay thế</h4>
             </div>
           </div>
 
           <div class="muted">
-            ĐỒNG HÀNH CÙNG SỰ PHÁT TRIỂN CỦA ĐỊA PHƯƠNG
+            Kiến trúc vận hành khuyến nghị: GitHub Pages làm giao diện công khai; Google Apps Script Web App làm lớp tiếp nhận dữ liệu; Google Sheet làm nguồn dữ liệu tổng hợp và dashboard quản trị.
           </div>
         </div>
       </aside>
@@ -571,7 +596,7 @@ _ Những người biết AI _
   </div>
 
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwC0fTrtQyDfly5Y0ZTm7u-k8fUvJW8rSFVpJgm7-mBLP9sHkab0XFiYjmagVuqBbh8xA/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQyNHMQ2tei_RIqjfIwEMjXDb9iegtC3tVj6GkzvMU5vQJVZ9OreEtdVF3EJXHHYJP_w/exec';
     const MESSAGE_SOURCE = 'AIA_2026_FORM';
 
     const form = document.getElementById('registerForm');
@@ -581,6 +606,7 @@ _ Những người biết AI _
     const xacNhan = document.getElementById('xacNhan');
 
     let submitPending = false;
+    let submitTimeout = null;
 
     function setMessage(type, text) {
       submitMessage.className = 'msg';
@@ -588,87 +614,135 @@ _ Những người biết AI _
       submitMessage.textContent = text || '';
     }
 
+    function sanitizeText(value) {
+      return String(value || '').trim();
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
     function getCheckedNoiDung() {
       return Array.from(document.querySelectorAll('#noiDungGroup input[type="checkbox"]:checked'))
-        .map(item => item.value.trim())
+        .map(item => sanitizeText(item.value))
         .filter(Boolean);
     }
 
+    function focusField(el) {
+      if (el && typeof el.focus === 'function') {
+        el.focus();
+      }
+    }
+
     function validateForm() {
-      if (!form.emailDangKy.value.trim()) {
-        setMessage('err', 'Vui lòng nhập Email đăng ký.');
-        form.emailDangKy.focus();
-        return false;
-      }
-
-      if (!form.hoTen.value.trim()) {
-        setMessage('err', 'Vui lòng nhập Tên.');
-        form.hoTen.focus();
-        return false;
-      }
-
-      if (!form.donViXa.value.trim()) {
-        setMessage('err', 'Vui lòng nhập Đơn vị - xã.');
-        form.donViXa.focus();
-        return false;
-      }
-
+      const email = sanitizeText(form.emailDangKy.value);
+      const hoTen = sanitizeText(form.hoTen.value);
+      const donViXa = sanitizeText(form.donViXa.value);
+      const mucTieu = sanitizeText(form.mucTieuCanDat.value);
+      const thoiGian = sanitizeText(form.thoiGianDuKienThucHien.value);
       const checked = getCheckedNoiDung();
+
+      if (!email) {
+        setMessage('err', 'Vui lòng nhập Email đăng ký.');
+        focusField(form.emailDangKy);
+        return false;
+      }
+
+      if (!isValidEmail(email)) {
+        setMessage('err', 'Email đăng ký chưa đúng định dạng.');
+        focusField(form.emailDangKy);
+        return false;
+      }
+
+      if (!hoTen) {
+        setMessage('err', 'Vui lòng nhập Tên.');
+        focusField(form.hoTen);
+        return false;
+      }
+
+      if (!donViXa) {
+        setMessage('err', 'Vui lòng nhập Đơn vị - xã.');
+        focusField(form.donViXa);
+        return false;
+      }
+
       if (checked.length === 0) {
-        setMessage('err', 'Vui lòng chọn ít nhất 01 nội dung');
+        setMessage('err', 'Vui lòng chọn ít nhất 01 nội dung hỗ trợ xây dựng.');
         return false;
       }
 
-      if (!form.mucTieuCanDat.value.trim()) {
+      if (!mucTieu) {
         setMessage('err', 'Vui lòng nhập Mục tiêu cần đạt.');
-        form.mucTieuCanDat.focus();
+        focusField(form.mucTieuCanDat);
         return false;
       }
 
-      if (!form.thoiGianDuKienThucHien.value) {
+      if (!thoiGian) {
         setMessage('err', 'Vui lòng chọn Thời gian dự kiến thực hiện.');
-        form.thoiGianDuKienThucHien.focus();
+        focusField(form.thoiGianDuKienThucHien);
         return false;
       }
 
       if (!xacNhan.checked) {
         setMessage('err', 'Vui lòng xác nhận hoàn thành đăng ký.');
-        xacNhan.focus();
+        focusField(xacNhan);
         return false;
       }
 
       hiddenNoiDung.value = checked.join(' | ');
+      form.emailDangKy.value = email;
+      form.hoTen.value = hoTen;
+      form.donViXa.value = donViXa;
+      form.mucTieuCanDat.value = mucTieu;
       return true;
     }
 
-    form.addEventListener('submit', function(e) {
+    function beginSubmittingState() {
+      submitPending = true;
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = 'ĐANG GỬI DỮ LIỆU...';
+      setMessage('wait', 'Hệ thống đang gửi dữ liệu, vui lòng chờ...');
+
+      clearTimeout(submitTimeout);
+      submitTimeout = setTimeout(function () {
+        if (submitPending) {
+          submitPending = false;
+          btnSubmit.disabled = false;
+          btnSubmit.textContent = 'XÁC NHẬN ĐĂNG KÝ NGAY';
+          setMessage('err', 'Quá thời gian chờ phản hồi từ hệ thống. Vui lòng kiểm tra lại Web App hoặc thử lại.');
+        }
+      }, 25000);
+    }
+
+    function endSubmittingState() {
+      submitPending = false;
+      btnSubmit.disabled = false;
+      btnSubmit.textContent = 'XÁC NHẬN ĐĂNG KÝ NGAY';
+      clearTimeout(submitTimeout);
+    }
+
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       if (submitPending) return;
 
-      if (!SCRIPT_URL || SCRIPT_URL.includes('https://script.google.com/macros/s/AKfycbwC0fTrtQyDfly5Y0ZTm7u-k8fUvJW8rSFVpJgm7-mBLP9sHkab0XFiYjmagVuqBbh8xA/exec')) {
+      if (!SCRIPT_URL || SCRIPT_URL.indexOf('script.google.com/macros/s/') === -1) {
         setMessage('err', 'Chưa cấu hình đường dẫn Apps Script Web App.');
         return;
       }
 
       if (!validateForm()) return;
 
-      submitPending = true;
-      btnSubmit.disabled = true;
-      btnSubmit.textContent = 'ĐANG GỬI DỮ LIỆU...';
-      setMessage('wait', 'Hệ thống đang gửi dữ liệu, vui lòng chờ...');
-
+      beginSubmittingState();
       form.action = SCRIPT_URL;
       form.submit();
     });
 
-    window.addEventListener('message', function(event) {
+    window.addEventListener('message', function (event) {
       const data = event.data || {};
       if (data.source !== MESSAGE_SOURCE) return;
 
-      submitPending = false;
-      btnSubmit.disabled = false;
-      btnSubmit.textContent = 'XÁC NHẬN ĐĂNG KÝ NGAY';
+      endSubmittingState();
 
       if (data.success) {
         form.reset();
@@ -679,6 +753,17 @@ _ Những người biết AI _
         setMessage('err', data.message || 'Có lỗi xảy ra trong quá trình gửi dữ liệu.');
       }
     });
+
+    function handleImgError(img, message) {
+      try {
+        img.style.display = 'none';
+        const fallback = img.parentElement.querySelector('.img-fallback');
+        if (fallback) {
+          fallback.style.display = 'flex';
+          fallback.textContent = message || 'Không tải được hình ảnh.';
+        }
+      } catch (e) {}
+    }
   </script>
 </body>
 </html>
